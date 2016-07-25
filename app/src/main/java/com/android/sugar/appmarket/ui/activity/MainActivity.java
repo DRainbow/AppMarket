@@ -1,16 +1,24 @@
 package com.android.sugar.appmarket.ui.activity;
 
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 
 import com.android.sugar.appmarket.R;
-import com.android.sugar.appmarket.ui.activity.BaseActivity;
+import com.android.sugar.appmarket.ui.fragment.BaseFragment;
+import com.android.sugar.appmarket.ui.fragment.FragmentFactory;
+import com.android.sugar.appmarket.ui.holder.MenuHolder;
+import com.android.sugar.appmarket.ui.widget.PagerTab;
 import com.android.sugar.appmarket.utils.UIUtils;
 
 public class MainActivity extends BaseActivity {
