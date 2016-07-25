@@ -10,22 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @ClassName: AppProtocol
+ * @ClassName: GameProtocol
  * @Description:
  * @author: SugarT
- * @date: 16/7/25 上午10:45
+ * @date: 16/7/25 上午10:50
  */
-public class AppProtocol extends BaseProtocol<List<AppInfo>> {
+public class GameProtocol extends BaseProtocol<List<AppInfo>> {
 
     @Override
     protected String getKey() {
-        return "app";
+        return "game";
     }
 
     @Override
     protected List<AppInfo> parseFromJson(String json) {
         try {
-            List<AppInfo> list = new ArrayList<AppInfo>();
+            List<AppInfo> list = new ArrayList<>();
             JSONArray array = new JSONArray(json);
             for (int i = 0; i < array.length(); i++) {
                 JSONObject obj = array.getJSONObject(i);
@@ -46,4 +46,5 @@ public class AppProtocol extends BaseProtocol<List<AppInfo>> {
             return null;
         }
     }
+
 }
