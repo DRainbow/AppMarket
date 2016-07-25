@@ -597,7 +597,8 @@ public class PagerTab extends ViewGroup {
     /**
      * ViewPager的OnPageChangeListener实现类，因为我们需要在PagerTab中获取PagerView的监听，以便可以调整tab
      */
-    private class PageListener implements OnPageChangeListener, OnPageChangeListener {
+    private class PageListener implements OnPageChangeListener {
+
         @Override
         public void onPageScrolled(int position, float positionOffset, final int positionOffsetPixels) {
             //根据VierPager的偏移值来滚动tab
